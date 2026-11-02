@@ -1,0 +1,22 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+.streamlit/secrets.toml
+*.log
+.runtime/
+
+# Configuração local e credenciais
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Ferramentas e artefatos locais
+.vscode/
+.idea/
+.coverage
+htmlcov/
+.DS_Store
+Thumbs.db
