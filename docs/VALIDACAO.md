@@ -40,3 +40,13 @@ Paleta alterada para verde claro, cinza claro e azul escuro. Contrastes calculad
 - Busca em src, pages, app.py e configuração: nenhuma referência à marca DataVision.
 - O bloqueio da execução anterior foi resolvido executando AppTest com acesso aos servidores internos locais do Streamlit fora do isolamento. Não foi necessário alterar a lógica da aplicação.
 - Arquivos já importados ou exportados anteriormente preservam seu nome original; novos relatórios usam relatorio_metricas_gestao_e_dados.xlsx.
+
+## Versão GitHub Pages
+
+- Aplicação estática em web/ com seis páginas, paleta preservada, dados processados no navegador e bibliotecas locais.
+- Oito testes Node aprovados: datas, números, limpeza sem mutação, validação, filtros, consolidação mensal, 2.400 vendas e exportação/reimportação Excel.
+- Navegador: importação da aba Vendas_para_limpar, remoção de 3 duplicatas, correção dos sete campos e ativação de 30 vendas.
+- Edição corrigida para registrar valores ao digitar; quantidade zero rejeitada e cópia corrigida aceita.
+- Recorte Tecnologia/Sul: 3 vendas, receita R$ 1.200, ticket R$ 400 e lucro R$ 480.
+- Excel baixado pela interface e aberto com OpenPyXL: oito abas, indicadores do recorte corretos e três vendas.
+- Dados importados ficam apenas na memória da aba; recarregar descarta a sessão.

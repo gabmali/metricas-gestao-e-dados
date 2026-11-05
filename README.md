@@ -1,6 +1,30 @@
 # ◈ Métricas Gestão e Dados
 
-Plataforma de análise de vendas em português brasileiro para importar, tratar e transformar dados em indicadores de gestão. Projeto de portfólio em análise de dados. Importação, ETL, indicadores, visualização interativa e relatórios em uma aplicação Streamlit, sem serviços pagos, APIs ou banco externo.
+Plataforma de análise de vendas em português brasileiro para importar, tratar e transformar dados em indicadores de gestão. Projeto de portfólio em análise de dados. Importação, ETL, indicadores, visualização interativa e relatórios em uma versão pública estática para GitHub Pages. A versão Python/Streamlit também está disponível para execução local.
+
+## Acesso online
+
+Aplicação pública: https://gabmali.github.io/metricas-gestao-e-dados/
+
+A versão online funciona sem login e sem instalação, inclusive no celular. As planilhas são processadas em memória no navegador; não são enviadas ao servidor. Recarregar a página descarta os dados importados. Exporte os resultados antes de sair.
+
+## Versão GitHub Pages
+
+O diretório `web/` contém HTML, CSS e JavaScript, com Plotly e SheetJS incluídos localmente. Os seis módulos mantêm importação CSV/XLSX com seleção de aba e mapeamento, limpeza com edição e validação, filtros, gráficos e exportações Excel/CSV.
+
+Para executar localmente:
+
+```bash
+python -m http.server 8503 --directory web
+```
+
+Abra http://localhost:8503. Para testar o núcleo da versão online com Node.js 20 ou mais recente:
+
+```bash
+node --test web/core.test.cjs
+```
+
+O workflow `.github/workflows/pages.yml` testa e publica `web/` no GitHub Pages a cada push para `main`. A navegação usa fragmentos (`#analises`, `#relatorios`), compatíveis com a hospedagem estática.
 
 ## Funcionalidades
 
@@ -21,7 +45,7 @@ Paleta visual: verde claro `#E6F4EA` nos cartões, cinza claro `#F3F5F4` no fund
 
 Python **3.11+** (validar preferencialmente em 3.12), Streamlit, Pandas, NumPy, Plotly, OpenPyXL, Pytest e Git. GitHub Actions executa a suíte em Python 3.11 e 3.12. Nenhuma credencial é necessária.
 
-## Instalação e execução
+## Instalação e execução da versão Python
 
 Abra um terminal na pasta deste README. No Windows, use uma instalação Python 3.11 ou mais recente:
 
@@ -46,6 +70,7 @@ streamlit run app.py
 
 ```text
 metricas-gestao-e-dados/
+├── web/                        # aplicação pública estática
 ├── app.py
 ├── requirements.txt
 ├── requirements-lock.txt       # versões do ambiente validado
