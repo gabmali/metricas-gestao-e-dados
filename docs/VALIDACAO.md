@@ -50,3 +50,5 @@ Paleta alterada para verde claro, cinza claro e azul escuro. Contrastes calculad
 - Recorte Tecnologia/Sul: 3 vendas, receita R$ 1.200, ticket R$ 400 e lucro R$ 480.
 - Excel baixado pela interface e aberto com OpenPyXL: oito abas, indicadores do recorte corretos e três vendas.
 - Dados importados ficam apenas na memória da aba; recarregar descarta a sessão.
+
+- Responsividade da versão estática conferida no Chromium integrado em 1440 e 390 pixels; largura dos componentes sem overflow global. A publicação GitHub Pages concluiu com sucesso e o endereço público retornou HTTP 200 sem autenticação.
